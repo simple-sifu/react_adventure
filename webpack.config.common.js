@@ -3,7 +3,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/tictactoe0/index.js",
+  // change the entry to use different app.
+  entry: "./src/shoppingCart/index.js",
   output: {
     filename: "index.bundle.js",
     path: path.join(__dirname, "/dist"),

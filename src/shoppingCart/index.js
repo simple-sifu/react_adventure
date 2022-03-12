@@ -1,6 +1,6 @@
 require("file-loader?name=[name].[ext]!../index.html");
 import React from "react";
 import ReactDOM from "react-dom";
-import Square from "./Square";
+import ShoppingCart from "./ShoppingCart";
 
-ReactDOM.render(<Square />, document.getElementById("root"));
+ReactDOM.render(<ShoppingCart />, document.getElementById("root"));

@@ -30,3 +30,10 @@ In React, function components are a simpler way to write components that only co
 4. Allows players to review a game’s history and see previous versions of a game’s board.
 
 # react_adventure
+
+# linting 
+empty .prettierrc.json triggers prettier to work
+npx prettier --write .
+
+# Switching Apps to share WebPack Config
+change the entry in webpack.conig.common.js to use different app.
