@@ -6,16 +6,22 @@ class ShoppingCart extends React.Component {
     console.log("ShoppingCart.constructor()");
     super(props);
     this.state = {
-      toggle: true,
+      text: "",
+      toDos: ["Apples", "Jello", "Spinach", "Milk"],
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.addToDo = this.addToDo.bind(this);
   }
 
-  handleClick() {
-    console.log("ShoppingCart.handleClick()");
-    this.setState({
-      toggle: !this.state.toggle,
-    });
+  handleChange(e) {
+    console.log("ShoppingCart.handleChange()");
+    this.setState({ text: e.target.value });
+  }
+
+  addToDo(){
+    console.log("ShoppingCart.addToDo()")
+    this.setState({toDos: [...this.state.toDos, this.state.text]})
+    this.setState({text: ""});
   }
 
   render() {
@@ -24,16 +30,20 @@ class ShoppingCart extends React.Component {
       <div>
         <h1>Shopping List</h1>
         <p id="first">Get it done today</p>
-        <p class="second">No excuses</p>
-        <input id="userInput" type="text" placeholder="enter items" />
-        <button id="enter">Enter</button>
+        <p className="second">No excuses</p>
+        <input 
+          id="userInput" 
+          type="text" 
+          placeholder="enter items"
+          onChange={this.handleChange}
+          value={this.state.text}
+        />
+        <button id="enter" onClick={() => this.addToDo()}>Enter</button>
         <ul>
-          <li random="23">Notebook</li>
-          <li>Jello</li>
-          <li>Spinach</li>
-          <li>Rice</li>
-          <li>Birthday Cake</li>
-          <li>Candles</li>
+            {  this.state.toDos.map( (toDo) => {
+                return <li key={toDo}>{toDo}</li>
+              })
+            }
         </ul>
       </div>
     );
