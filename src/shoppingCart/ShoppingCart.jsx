@@ -7,10 +7,10 @@ class ShoppingCart extends React.Component {
     super(props);
     this.state = {
       text: "",
-      toDos: ["Apples", "Jello", "Spinach", "Milk"],
+      toDoItems: ["Apples", "Jello", "Spinach", "Milk"],
     };
     this.handleChange = this.handleChange.bind(this);
-    this.addToDo = this.addToDo.bind(this);
+    this.addToDoItems = this.addToDoItems.bind(this);
   }
 
   handleChange(e) {
@@ -18,10 +18,12 @@ class ShoppingCart extends React.Component {
     this.setState({ text: e.target.value });
   }
 
-  addToDo(){
-    console.log("ShoppingCart.addToDo()")
-    this.setState({toDos: [...this.state.toDos, this.state.text]})
-    this.setState({text: ""});
+  addToDoItems(){
+    console.log("ShoppingCart.addToDoItems()")
+    this.setState({
+      toDoItems: this.state.toDoItems.concat(this.state.text), 
+      text: ""
+    })
   }
 
   render() {
@@ -38,9 +40,9 @@ class ShoppingCart extends React.Component {
           onChange={this.handleChange}
           value={this.state.text}
         />
-        <button id="enter" onClick={() => this.addToDo()}>Enter</button>
+        <button id="enter" onClick={() => this.addToDoItems()}>Enter</button>
         <ul>
-            {  this.state.toDos.map( (toDo) => {
+            {  this.state.toDoItems.map( (toDo) => {
                 return <li key={toDo}>{toDo}</li>
               })
             }
