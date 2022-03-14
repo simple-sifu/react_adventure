@@ -32,7 +32,8 @@ In React, function components are a simpler way to write components that only co
 # react_adventure
 
 # linting 
-empty .prettierrc.json triggers prettier to work
+empty .prettierrc.json triggers prettier to run prettier
+
 npx prettier --write .
 
 # Switching Apps to share WebPack Config
