@@ -14,24 +14,7 @@ explicit declaration.
 npm run build -- hotfix loading
 npm start -- will host at localhost:3010
 
-## Immutability is important
-
-The main benefit of immutability is that it helps you build pure components in React. Immutable data can easily determine if changes have been made, which helps to determine when a component requires re-rendering.
-
-## Function component
-
-In React, function components are a simpler way to write components that only contain a render method and don’t have their own state. Instead of defining a class which extends React.Component, we can write a function that takes props as input and returns what should be rendered. Function components are less tedious to write than classes, and many components can be expressed this way.
-
-## Wrapping upCongratulations! You’ve created a tic-tac-toe game that:
-
-1. Lets you play tic-tac-toe,
-2. Indicates when a player has won the game,
-3. Stores a game’s history as a game progresses,
-4. Allows players to review a game’s history and see previous versions of a game’s board.
-
-# react_adventure
-
-# Linting 
+# Linting - formating code
 empty .prettierrc.json triggers prettier to run prettier
 
 npx prettier --write .
@@ -40,7 +23,10 @@ npx prettier --write .
 1. change the entry in webpack.config.common.js to use different app.
 2. To learn more about how things work in WebPack Config see here - https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658
 
-## Terminology
+## Webpack Terminology
 1. entry - webpack will start from the parent component and see all other components.
 2. sourcemap - connect to src tree to show readable code in console.
 3. loader - test to filter out desired files to act on. 
+4. resolve - Webpack doesnt know to resolve .jsx files implicitly. You can include .jsx in the extensions that webpack should resolve without explicit declaration.
+
+    `resolve: { extensions: ['.js', '.jsx'] }`
