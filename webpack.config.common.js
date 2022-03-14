@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   // change the entry to use different app.
-  entry: "./src/astronauts/index.js",
+  entry: "./src/shoppingCart/index.js",
   output: {
     filename: "index.bundle.js",
     path: path.join(__dirname, "/dist"),
