@@ -31,11 +31,16 @@ In React, function components are a simpler way to write components that only co
 
 # react_adventure
 
-# linting 
+# Linting 
 empty .prettierrc.json triggers prettier to run prettier
 
 npx prettier --write .
 
-# Switching Apps to share WebPack Config
-change the entry in webpack.config.common.js to use different app.
-To learn more about how things work in WebPack Config see here - https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658
+# Webpack - Loading different Apps
+1. change the entry in webpack.config.common.js to use different app.
+2. To learn more about how things work in WebPack Config see here - https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658
+
+## Terminology
+1. entry - webpack will start from the parent component and see all other components.
+2. sourcemap - connect to src tree to show readable code in console.
+3. loader - test to filter out desired files to act on. 
