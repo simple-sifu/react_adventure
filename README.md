@@ -36,4 +36,5 @@ empty .prettierrc.json triggers prettier to work
 npx prettier --write .
 
 # Switching Apps to share WebPack Config
-change the entry in webpack.conig.common.js to use different app.
+change the entry in webpack.config.common.js to use different app.
+To learn more about how things work in WebPack Config see here - https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658
