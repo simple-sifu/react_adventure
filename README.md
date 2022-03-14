@@ -1,7 +1,9 @@
-## script commands to bring up application
+# NPM script commands to bring up application
 
 npm install -- load npm 3rd party libraries.
+
 npm run build -- hotfix loading.
+
 npm start -- will host at localhost:3010.
 
 # Webpack - Loading different Apps
