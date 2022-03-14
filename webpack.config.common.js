@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   // change the entry to use different app.
-  entry: "./src/shoppingCart/index.js",
+  entry: "./src/astronauts/index.js",
   output: {
     filename: "index.bundle.js",
     path: path.join(__dirname, "/dist"),
@@ -28,6 +28,17 @@ module.exports = {
         use: {
           loader: "babel-loader",
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
     ],
   },
