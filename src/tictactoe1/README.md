@@ -10,3 +10,7 @@ To collect data from multiple children, or to have two child components communic
 2. Indicates when a player has won the game,
 3. Stores a game’s history as a game progresses,
 4. Allows players to review a game’s history and see previous versions of a game’s board.
+
+# React Tic Tac Toe
+
+[Tic-tac-toe](https://simple-sifu.github.io/react_tic_tac_toe/)

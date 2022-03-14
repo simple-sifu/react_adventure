@@ -1,26 +1,11 @@
-# React Tic Tac Toe
+## script commands to bring up application
 
-[Tic-tac-toe](https://simple-sifu.github.io/react_tic_tac_toe/)
-
-## Webpack - using jsx requires changes to webpack.config.js
-
-Webpack doesnt know to resolve .jsx files implicitly. You can include .jsx in the extensions that webpack should resolve without
-explicit declaration.
-
-`resolve: { extensions: ['.js', '.jsx'] }`
-
-## script commands
-
-npm run build -- hotfix loading
-npm start -- will host at localhost:3010
-
-# Linting - formating code
-empty .prettierrc.json triggers prettier to run prettier
-
-npx prettier --write .
+npm install -- load npm 3rd party libraries.
+npm run build -- hotfix loading.
+npm start -- will host at localhost:3010.
 
 # Webpack - Loading different Apps
-1. change the entry in webpack.config.common.js to use different app.
+1. Change the entry in webpack.config.common.js to use different app.
 2. To learn more about how things work in WebPack Config see here - https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658
 
 ## Webpack Terminology
@@ -30,3 +15,9 @@ npx prettier --write .
 4. resolve - Webpack doesnt know to resolve .jsx files implicitly. You can include .jsx in the extensions that webpack should resolve without explicit declaration.
 
     `resolve: { extensions: ['.js', '.jsx'] }`
+
+
+# Linting - formating code
+empty .prettierrc.json triggers prettier to run prettier
+
+npx prettier --write .
