@@ -1,4 +1,4 @@
-# Tic Tac Toe version 0
+# Shopping Cart - basic React
 
 1.  Why does React use two Javascript libraries ?
 
