@@ -1,10 +1,8 @@
 # NPM script commands to bring up application
 
-npm install -- load npm 3rd party libraries.
-
-npm run build -- hotfix loading.
-
-npm start -- will host at localhost:3010.
+1. npm install -- load npm 3rd party libraries.
+2. npm run build -- hotfix loading.
+3. npm start -- will host at localhost:3010.
 
 # Webpack - Loading different Apps
 1. Change the entry in webpack.config.common.js to use different app.
@@ -20,6 +18,6 @@ npm start -- will host at localhost:3010.
 
 
 # Linting - formating code
-empty .prettierrc.json triggers prettier to run prettier
+empty .prettierrc.json triggers prettier to execute
 
 npx prettier --write .
