@@ -1,11 +1,21 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Square(props) {
-  return (
-    <button className="square" onClick={() => props.onClick()}>
-      {props.toggle ? "X" : "O"}
-    </button>
-  );
+function Square({value, onClick})  {
+
+    return (
+			<button className="square" onClick={ () =>  onClick() }>
+					{value}
+			</button>
+    )
+}
+ 
+Square.propTypes = {
+  value: PropTypes.array,
+  onClick: PropTypes.func.isRequired
 }
 
+Square.defaultProps = {
+  value: "-"
+}
 export default Square;
