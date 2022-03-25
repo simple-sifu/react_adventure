@@ -4,7 +4,7 @@ class App extends React.Component {
 
 render(){
   return (
-    <div>Hello World</div>
+    <div>Please check console for counter results</div>
   )
 }
 
