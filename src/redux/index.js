@@ -18,7 +18,7 @@ const decrementAction = () => {
   };
 };
 
-// Reducer, Action is INCREMENT
+// Reducer, Action is INCREMENT, state is initial state
 const counterReducer = (state=0, action) => {
   switch (action.type) {
     case "INCREMENT":
@@ -39,11 +39,4 @@ store.dispatch(incrementAction());
 store.dispatch(incrementAction());
 store.dispatch(decrementAction());
 
-
-// Dispatch
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'))
