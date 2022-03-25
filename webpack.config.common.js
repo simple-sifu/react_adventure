@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   // change the entry to use different app.
-  entry: "./src/tictactoe2/index.js",
+  entry: "./src/redux/index.js",
   output: {
     filename: "index.bundle.js",
     path: path.join(__dirname, "/dist"),
