@@ -5,35 +5,35 @@ import { createStore } from 'redux';
 import App from './App';
 
 // Action Increment
-const increment = () => {
+const incrementAction = () => {
   return {
     type: 'INCREMENT'
   };
 };
-const decrement = () => {
+const decrementAction = () => {
   return {
     type: 'DECREMENT'
   };
 };
 
 // Reducer
-const counter = (state=0, action) => {
+const counterReducer = (state=0, action) => {
   switch (action.type) {
     case "INCREMENT":
       return state + 1
     }
 }
 
-let store = createStore(counter);
+let store = createStore(counterReducer);
 
 // Display it in console
 store.subscribe(() => console.log(store.getState()));
 
 
 // DISPATCH
-store.dispatch(increment());
-store.dispatch(increment());
-store.dispatch(decrement());
+store.dispatch(incrementAction());
+store.dispatch(incrementAction());
+store.dispatch(decrementAction());
 
 
 // Dispatch
