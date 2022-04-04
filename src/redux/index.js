@@ -31,12 +31,14 @@ const counterReducer = (state=0, action) => {
 let store = createStore(counterReducer);
 
 // Display it in console
-store.subscribe(() => console.log(store.getState()));
+store.subscribe(() => console.log("store.dispatch() -", store.getState()));
 
 
 // DISPATCH   state=0
 store.dispatch(incrementAction()); // state = 1
 store.dispatch(incrementAction()); // state = 2
+store.dispatch(incrementAction()); // state = 3
+store.dispatch(incrementAction()); // state = 4
 store.dispatch(decrementAction()); // state = 1
 
 ReactDOM.render(<App />, document.getElementById('root'))
